@@ -7,7 +7,7 @@
     line-height: 29px;
     color: #000000;
 
-    width: 50%;
+    
     display: inline-block;
     margin-top: 20px;
     position: relative;
@@ -16,7 +16,7 @@
 .percent-bar-background {
     background: #E7E7E7;
     border-radius: 15px;
-    width: 110px;
+    width: 100px;
     height: 20px;
     display: inline-block;
     position: absolute;
@@ -31,4 +31,16 @@
     position: absolute;
     top: 5px;
     left: 5px;
+}
+
+@media (max-width: 500px) {
+    .property {
+        width: 100%;
+    }
+ }
+
+ @media (min-width: 500px) {
+    .property {
+        width: 50%;
+    }
 }

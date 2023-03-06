@@ -4,7 +4,7 @@ function PercentBar(props) {
       <span
         className="percent-bar-fill"
         style={{
-          width: props.children * 100,
+          width: (props.children + 0.1) * 80,
           background: `hsla(${
             props.ideal === "high"
               ? 120 * Math.max(props.children - 0.1, 0)
