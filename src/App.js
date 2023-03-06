@@ -1,5 +1,7 @@
-import './App.css';
+import './styles/App.css';
 import { useState } from 'react';
+import Generator from './components/Generator';
+import Suggestions from './components/Suggestions';
 
 
 function App() {
@@ -9,15 +11,13 @@ function App() {
   async function generateIdea() {
     return fetch('https://www.boredapi.com/api/activity/')
     .then((response) => response.json())
-    .then((data) => setSuggestions([...suggestions, {...data, ideaId : newIdeaId}]));
+    .then((data) => setSuggestions([...suggestions.slice(-9), {...data, ideaId : newIdeaId}]));
   }
 
   return (
     <div className="App">
-      <button onClick={generateIdea}>Generate</button>
-      <ul>
-        {suggestions.map( (item) => <li key={item.ideaId}>{item.activity}</li>)}
-      </ul>
+      <Generator callback={generateIdea}></Generator>
+      <Suggestions>{suggestions}</Suggestions>
     </div>
   );
 }
