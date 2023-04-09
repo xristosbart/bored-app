@@ -42,7 +42,7 @@ ul:has(.container) {
   margin: 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .App {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -94,7 +94,7 @@ ul:has(.container) {
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   .App {
     padding-top: 60px;
     padding-bottom: 60px;

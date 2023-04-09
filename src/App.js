@@ -10,7 +10,7 @@ function App() {
 
   async function generateIdea() {
     return fetch('https://www.boredapi.com/api/activity/')
-    .then((response) => response.json())
+    .then((response) => (response.json()))
     .then((data) => setSuggestions([...suggestions.slice(-9), {...data, ideaId : newIdeaId}]));
   }
 

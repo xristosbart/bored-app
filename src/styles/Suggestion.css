@@ -33,13 +33,13 @@
     left: 5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .property {
         width: 100%;
     }
  }
 
- @media (min-width: 500px) {
+ @media (min-width: 800px) {
     .property {
         width: 50%;
     }
